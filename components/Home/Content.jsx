@@ -79,15 +79,32 @@ export default function Content() {
         ></iframe>
         <div className="absolute h-[58vh] bg-brown right-24 -top-7 z-30 p-8 shadow-2xl">
           <h4 className="text-xl">Our Location</h4>
-          <p className="text-sm pt-3">51 Mangold Street</p>
+          <p className="text-sm pt-1">51 Mangold Street</p>
           <p className="text-sm">Newton Park</p>
           <p className="text-sm">Port Elizabeth</p>
-          <h4 className="text-xl mt-4">Quick Contact</h4>
-          <p className="text-sm pt-3">041 543 1530</p>
+          <h4 className="text-xl mt-2">Quick Contact</h4>
+          <p className="text-sm pt-1">041 543 1530</p>
           <p className="text-sm">info@bronscorcc.co.za</p>
-          <h4 className="text-xl mt-4">Opening Hours</h4>
-          <p className="text-sm pt-3">Monday - Friday</p>
+          <h4 className="text-xl mt-2">Opening Hours</h4>
+          <p className="text-sm pt-1">Monday - Friday</p>
           <p className="text-sm">09:00 AM - 05:00 PM</p>
+          <button className="flex space-x-3 w-[250px] md:w-fit bg-black mt-4 px-8 py-2 hover:shadow-md transition">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 rounded-full bg-white text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p className="uppercase text-white">Request A Quote</p>
+          </button>
         </div>
       </div>
     </Fragment>
