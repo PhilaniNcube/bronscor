@@ -8,12 +8,12 @@ const Hero = () => {
         className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover relative"
         style={{ backgroundImage: 'url(/images/banner.jpg)' }}
       >
-        <div className="bg-brown bg-opacity-60 lg:h-[40%] w-2/4 py-4 lg:pl-[180px] xl:pl-[350px] translate-y-1/2 flex flex-col justify-center text-left">
+        <div className="bg-brown bg-opacity-70 lg:h-[40%] lg:w-2/5 py-4  xl:pl-[130px] translate-y-1/2 flex flex-col justify-center text-left">
           <h1 className="text-3xl xl:text-5xl uppercase px-6 lg:px-0">
             Your <br /> All In One
             <br /> Solution
           </h1>
-          <ul className="hidden lg:flex space-x-4 text-sm xl:text-md uppercase">
+          <ul className="hidden lg:flex flex-wrap space-x-2 text-xs xl:text-md uppercase">
             <li>Special Steels</li>
             <li>Castings</li>
             <li>Tools & Hardware</li>
