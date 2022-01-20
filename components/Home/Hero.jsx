@@ -21,7 +21,7 @@ const Hero = () => {
             <li>3D Print</li>
           </ul>
         </div>
-        <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6  text-white absolute bottom-[15%] left-[18%]">
+        <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6  text-white absolute bottom-[15%] left-[7.5%]">
           <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
