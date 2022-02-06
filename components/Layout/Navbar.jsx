@@ -19,31 +19,22 @@ import {
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
+import { getCategories } from '../../lib/index';
+import Link from 'next/link';
+
 const solutions = [
   {
-    name: 'Steels',
+    name: 'Steel',
     description:
       'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    href: 'steel',
     icon: ChartBarIcon,
   },
   {
     name: 'Castings',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    href: 'castings',
     icon: CursorClickIcon,
-  },
-  {
-    name: 'Tools & Hardware',
-    description: "Your customers' data will be safe and secure.",
-    href: '#',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: '3D Printing',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: ViewGridIcon,
   },
 ];
 
@@ -51,7 +42,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function Navbar({ categories }) {
+  console.log(categories);
   return (
     <Popover className="relative bg-black text-brown">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex">
@@ -73,12 +65,12 @@ export default function Example() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <a href="#" className="text-base font-medium text-brown">
-              Home
-            </a>
-            <a href="#" className="text-base font-medium text-brown">
-              About Us
-            </a>
+            <Link href="/">
+              <a className="text-base font-medium text-brown">Home</a>
+            </Link>
+            <Link href="/about">
+              <a className="text-base font-medium text-brown">About Us</a>
+            </Link>
 
             <Popover className="relative">
               {({ open }) => (
@@ -112,18 +104,37 @@ export default function Example() {
                       <div className="rounded-lg shadow-lg  overflow-hidden">
                         <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                              href={`/category/${item.href}`}
                             >
+                              <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-brown">
+                                    {item.name}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
+                          ))}
+                          <Link href={`/tools`}>
+                            <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
                               <div className="ml-4">
                                 <p className="text-base font-medium text-brown">
-                                  {item.name}
+                                  Tools & Hardware
                                 </p>
                               </div>
                             </a>
-                          ))}
+                          </Link>
+                          <Link href={`/3d-printing`}>
+                            <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                              <div className="ml-4">
+                                <p className="text-base font-medium text-brown">
+                                  3D Printing
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </Popover.Panel>
@@ -131,10 +142,9 @@ export default function Example() {
                 </Fragment>
               )}
             </Popover>
-
-            <a href="#" className="text-base font-medium text-brown">
-              Contact Us
-            </a>
+            <Link href="/contact">
+              <a className="text-base font-medium text-brown">Contact Us</a>
+            </Link>
           </Popover.Group>
         </div>
         <button className="hidden bg-brown hover:bg-opacity-80 cursor-pointer  transition duration-150 h-[88px] md:flex ml-8 px-6 items-center justify-center">
@@ -176,31 +186,42 @@ export default function Example() {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md"
-                    >
+                    <Link key={item.name} href={`/category/${item.href}`}>
+                      <a className="-m-3 p-3 flex items-center rounded-md">
+                        <span className="ml-3 text-base font-medium text-brown">
+                          {item.name}
+                        </span>
+                      </a>
+                    </Link>
+                  ))}
+                  <Link href={`/tools`}>
+                    <a className="-m-3 p-3 flex items-center rounded-md">
                       <span className="ml-3 text-base font-medium text-brown">
-                        {item.name}
+                        Tools & Hardware
                       </span>
                     </a>
-                  ))}
+                  </Link>
+                  <Link href={`/3d-printing`}>
+                    <a className="-m-3 p-3 flex items-center rounded-md">
+                      <span className="ml-3 text-base font-medium text-brown">
+                        3D Printing
+                      </span>
+                    </a>
+                  </Link>
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#" className="text-base font-medium text-brown">
-                  Home
-                </a>
-
-                <a href="#" className="text-base font-medium text-brown">
-                  About Us
-                </a>
-                <a href="#" className="text-base font-medium text-brown">
-                  Contacts
-                </a>
+                <Link href="/">
+                  <a className="text-base font-medium text-brown">Home</a>
+                </Link>
+                <Link href="/about">
+                  <a className="text-base font-medium text-brown">About Us</a>
+                </Link>
+                <Link href="/contact">
+                  <a className="text-base font-medium text-brown">Contact Us</a>
+                </Link>
               </div>
             </div>
           </div>
@@ -208,4 +229,12 @@ export default function Example() {
       </Transition>
     </Popover>
   );
+}
+
+export async function getStaticProps() {
+  const categories = await getCategories();
+
+  return {
+    props: { products, categories },
+  };
 }
