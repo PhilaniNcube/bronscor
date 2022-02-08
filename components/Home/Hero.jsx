@@ -23,23 +23,25 @@ const Hero = () => {
           </ul>
         </div>
         <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6  text-white absolute bottom-[15%] left-[7.5%]">
-          <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 rounded-full bg-white text-brown"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <p className="uppercase">More About Us</p>
-          </button>
+          <Link href="/about" passHref>
+            <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 rounded-full bg-white text-brown"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p className="uppercase">More About Us</p>
+            </button>
+          </Link>
           <Link href="/products" passHref>
             <button className="flex space-x-3 w-[250px] md:w-fit bg-black px-8 py-4 hover:shadow-md transition">
               <svg
@@ -72,9 +74,11 @@ const Hero = () => {
               Our steels include: Bronze, Brass, Copper, Cast Iron, Stainless
               Steel, Aluminium & more
             </p>
-            <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
-              VIEW
-            </button>
+            <Link href="/category/steel" passHref>
+              <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
+                VIEW
+              </button>
+            </Link>
           </div>
           <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/casting.svg" alt="icon" className="h-8 w-8" />
@@ -85,9 +89,11 @@ const Hero = () => {
               We specialise in Crane Wheel Customisation as well as Brake Wheels
               And Sheaves.
             </p>
-            <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
-              VIEW
-            </button>
+            <Link href="/category/castings" passHref>
+              <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
+                VIEW
+              </button>
+            </Link>
           </div>
           <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/tools.svg" alt="icon" className="h-8 w-8" />
@@ -98,9 +104,11 @@ const Hero = () => {
               Big or small, whatever tools you need for your business, we can
               assist.
             </p>
-            <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
-              VIEW
-            </button>
+            <Link href="/tools" passHref>
+              <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
+                VIEW
+              </button>
+            </Link>
           </div>
           <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/steel.svg" alt="icon" className="h-8 w-8" />
@@ -111,9 +119,11 @@ const Hero = () => {
               From automotive to electronic parts, Bronscor can print parts with
               complex geometries.
             </p>
-            <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
-              VIEW
-            </button>
+            <Link href="/3d-printing" passHref>
+              <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
+                VIEW
+              </button>
+            </Link>
           </div>
         </div>
       </div>

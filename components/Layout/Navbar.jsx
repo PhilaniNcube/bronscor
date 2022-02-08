@@ -24,7 +24,7 @@ import Link from 'next/link';
 
 const solutions = [
   {
-    name: 'Steel',
+    name: 'Steels',
     description:
       'Get a better understanding of where your traffic is coming from.',
     href: 'steel',
@@ -43,7 +43,6 @@ function classNames(...classes) {
 }
 
 export default function Navbar({ categories }) {
-  console.log(categories);
   return (
     <Popover className="relative bg-black text-brown">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex">
@@ -107,14 +106,18 @@ export default function Navbar({ categories }) {
                             <Link
                               key={item.name}
                               href={`/category/${item.href}`}
+                              passHref
                             >
-                              <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                              <Popover.Button
+                                as="a"
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                              >
                                 <div className="ml-4">
                                   <p className="text-base font-medium text-brown">
                                     {item.name}
                                   </p>
                                 </div>
-                              </a>
+                              </Popover.Button>
                             </Link>
                           ))}
                           <Link href={`/tools`}>
@@ -147,10 +150,12 @@ export default function Navbar({ categories }) {
             </Link>
           </Popover.Group>
         </div>
-        <button className="hidden bg-brown hover:bg-opacity-80 cursor-pointer  transition duration-150 h-[88px] md:flex ml-8 px-6 items-center justify-center">
-          <p className=" text-black">Get A Quote</p>
-          <ArrowSmRightIcon className="text-black w-6" />
-        </button>
+        <Link href="/contact" passHref>
+          <button className="hidden bg-brown hover:bg-opacity-80 cursor-pointer  transition duration-150 h-[88px] md:flex ml-8 px-6 items-center justify-center">
+            <p className=" text-black">Get A Quote</p>
+            <ArrowSmRightIcon className="text-black w-6" />
+          </button>
+        </Link>
       </div>
 
       <Transition
