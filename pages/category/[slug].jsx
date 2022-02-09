@@ -3,7 +3,6 @@ import CategoryHero from '../../components/Category/CategoryHero';
 import { getCategory } from '../../lib';
 
 const category = ({ category }) => {
-  console.log(category);
   return (
     <Fragment>
       <CategoryHero category={category} />
