@@ -45,6 +45,20 @@ const index = () => {
             </p>
           </div>
         </div>
+        <div className="container mx-auto">
+          <h3 className="text-brown font-bold text-3xl text-center">
+            Products
+          </h3>
+
+          <div className="w-full flex justify-center py-4">
+            <ul className="pl-6 list-disc">
+              <li>Production Line Final Assembley Tailgate Jig</li>
+              <li>Production Line Final Assembley Taillight Jig</li>
+              <li>Production Line Final Assembley Seatbelt Jig</li>
+              <li>Production Line Final Assembley Headlamp Jig</li>
+            </ul>
+          </div>
+        </div>
       </main>
     </Fragment>
   );
