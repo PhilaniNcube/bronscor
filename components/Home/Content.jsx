@@ -18,20 +18,20 @@ export default function Content() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="bg-brown h-[90%] w-[85%] self-end">
+        <div className="bg-brown lg:h-[90%] w-[85%] self-end">
           <div className="h-full w-full bg-white md:-translate-x-12 md:-translate-y-8 p-8 shadow-xl">
-            <h2 className="text-brown text-2xl">
+            <h2 className="text-brown text-xl md:text-2xl">
               Ready to Bring Bigger, Better, Faster & Stronger Products Than
               Ever
             </h2>
-            <p className="py-4 font-light">
+            <p className="py-4 font-light text-sm lg:text-md">
               Bronscor was established in 1992 as a solely owned black company,
               supplying maintenance materials & engineering services to
               factories, manufacturing concerns & engineering companies
               Nationally
             </p>
             <h3 className="text-brown text-lg">GREAT SERVICE</h3>
-            <p className="font-light">
+            <p className="font-light text-sm lg:text-md">
               We pride ourselves on service, offering cut to size on most of our
               materials and a 24 hour breakdown service.
             </p>
@@ -77,7 +77,7 @@ export default function Content() {
           loading="lazy"
           className="w-full h-[50vh] z-10"
         ></iframe>
-        <div className="absolute h-[58vh] bg-brown right-24 -top-7 z-30 p-8 shadow-2xl">
+        <div className="absolute h-[58vh] bg-brown md:right-24 -top-7 z-30 p-8 shadow-2xl">
           <h4 className="text-xl">Our Location</h4>
           <p className="text-sm pt-1">51 Mangold Street</p>
           <p className="text-sm">Newton Park</p>

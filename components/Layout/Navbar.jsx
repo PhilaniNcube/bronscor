@@ -46,16 +46,18 @@ export default function Navbar({ categories }) {
   return (
     <Popover className="relative bg-black text-brown">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex">
-        <div className="flex-1 max-w-7xl flex justify-between items-center py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Bronscor</span>
-              <img
-                className="h-12 w-auto sm:h-10"
-                src="/images/logo.png"
-                alt=""
-              />
-            </a>
+        <div className="flex-1 max-w-7xl flex justify-between items-center py-2 md:justify-start md:space-x-10">
+          <div className="flex justify-start lg:flex-1">
+            <Link href="/">
+              <a>
+                <span className="sr-only">Bronscor</span>
+                <img
+                  className="object-cover w-52"
+                  src="/images/logo.png"
+                  alt=""
+                />
+              </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-black rounded-md p-2 inline-flex items-center justify-center text-brown focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brown">

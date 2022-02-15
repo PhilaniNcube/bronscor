@@ -6,23 +6,22 @@ const Hero = () => {
   return (
     <Fragment>
       <div
-        className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover relative"
+        className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center"
         style={{ backgroundImage: 'url(/images/banner.jpg)' }}
       >
-        <div className="bg-brown bg-opacity-70 lg:h-[40%] lg:w-2/5 py-4  xl:pl-[130px] translate-y-1/2 flex flex-col justify-center text-left">
+        <div className="bg-brown bg-opacity-70 lg:h-[40%] lg:w-2/5 py-4 xl:px-8 mb-6 flex flex-col justify-center text-left">
           <h1 className="text-3xl xl:text-5xl uppercase px-6 lg:px-0">
             Your <br /> All In One
             <br /> Solution
           </h1>
-          <ul className="hidden lg:flex flex-wrap space-x-2 text-xs xl:text-md uppercase">
+          <ul className="hidden lg:flex flex-wrap space-x-2 text-xs xl:text-md uppercase mt-2">
             <li>Special Steels</li>
             <li>Castings</li>
             <li>Tools & Hardware</li>
-            <li>Tools</li>
             <li>3D Print</li>
           </ul>
         </div>
-        <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6  text-white absolute bottom-[15%] left-[7.5%]">
+        <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6  text-white">
           <Link href="/about" passHref>
             <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
               <svg
@@ -63,9 +62,9 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-brown max-h-[250px] z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
+      <div className="bg-brown min-h-[230px] z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="bg-white h-[300px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/steel.svg" alt="icon" className="h-8 w-8" />
             <h3 className="text-xl text-black uppercase text-center">
               Special Steels
@@ -80,7 +79,7 @@ const Hero = () => {
               </button>
             </Link>
           </div>
-          <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
+          <div className="bg-white h-[300px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/casting.svg" alt="icon" className="h-8 w-8" />
             <h3 className="text-xl text-black uppercase text-center">
               Castings
@@ -95,7 +94,7 @@ const Hero = () => {
               </button>
             </Link>
           </div>
-          <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
+          <div className="bg-white h-[300px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/tools.svg" alt="icon" className="h-8 w-8" />
             <h3 className="text-xl text-black uppercase text-center">
               Tools & Hardware
@@ -110,7 +109,7 @@ const Hero = () => {
               </button>
             </Link>
           </div>
-          <div className="bg-white h-[274px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
+          <div className="bg-white h-[300px] flex flex-col justify-center items-center px-4 shadow-md space-y-2 z-20 -translate-y-3">
             <img src="/icons/steel.svg" alt="icon" className="h-8 w-8" />
             <h3 className="text-xl text-black uppercase text-center">
               3D Printing
