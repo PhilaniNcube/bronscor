@@ -10,32 +10,27 @@ const ProductsGrid = ({ products, categories }) => {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl text-gray-900">All Products</h1>
         <div className="grid grid-cols-1 lg:grid-cols-12">
-          <div className="px-6 lg:px-0 col-span-12 lg:col-span-9 grid grid-cols-2 gap-12">
+          <div className="px-6 lg:px-0 col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-12">
             {products.map((product) => (
               <div
                 key={product.node.id}
-                className="shadow-lg rounded pb-4 mb-8"
+                className="shadow-lg p-2 rounded pb-4 mb-8 bg-brown bg-opacity-70"
               >
-                <div className="relative overflow-hidden pb-80 mb-6">
-                  <img
-                    src={
-                      product.node.image
-                        ? product.node.image.url
-                        : 'https://media.graphcms.com/nB9v9NnTHm3OVQ7h656T'
-                    }
-                    className="object-top absolute h-80 w-full object-contain rounded-t-lg"
-                    alt=""
-                  />
-                </div>
                 <div className="p-0 lg:p-4">
-                  <h3 className="text-lg text-gray-800">{product.node.name}</h3>
-                  <p>
+                  <h3 className="text-lg text-gray-800 font-bold">
+                    {product.node.shape}
+                  </h3>
+                  <p className="font-light">
+                    Product Type:{' '}
                     {product.node.productType
                       ? product.node.productType.name
                       : null}
                   </p>
+                  <p className="font-light">
+                    {product.node.productCategory.title}
+                  </p>
                   <small className="text-sm text-gray-500">
-                    {product.node.description}
+                    {product.node.dimensions}
                   </small>
                 </div>
               </div>
@@ -44,18 +39,12 @@ const ProductsGrid = ({ products, categories }) => {
           <div className="lg:col-span-3 col-span-1 ml-4">
             <ul className="flex flex-col sticky top-16">
               <Link href="/products">
-                <a className="text-lg hover:text-brown">All Products</a>
+                <a className="text-lg hover:text-brown">Steels</a>
               </Link>
-              {categories.map((category) => (
-                <Link
-                  key={category.node.id}
-                  href={`/category/${category.node.slug}`}
-                >
-                  <a className="text-lg hover:text-brown">
-                    {category.node.title}
-                  </a>
-                </Link>
-              ))}
+
+              <Link href="/castings">
+                <a className="text-lg hover:text-brown">Castings</a>
+              </Link>
               <Link href="/tools">
                 <a className="text-lg hover:text-brown">Tools</a>
               </Link>

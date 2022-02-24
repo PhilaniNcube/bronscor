@@ -4,17 +4,8 @@ import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import {
   ArrowSmRightIcon,
-  BookmarkAltIcon,
-  CalendarIcon,
   ChartBarIcon,
-  CursorClickIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
@@ -27,14 +18,8 @@ const solutions = [
     name: 'Steels',
     description:
       'Get a better understanding of where your traffic is coming from.',
-    href: 'steel',
+    href: 'products',
     icon: ChartBarIcon,
-  },
-  {
-    name: 'Castings',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: 'castings',
-    icon: CursorClickIcon,
   },
 ];
 
@@ -107,7 +92,7 @@ export default function Navbar({ categories }) {
                           {solutions.map((item) => (
                             <Link
                               key={item.name}
-                              href={`/category/${item.href}`}
+                              href={`/${item.href}`}
                               passHref
                             >
                               <Popover.Button
@@ -122,6 +107,15 @@ export default function Navbar({ categories }) {
                               </Popover.Button>
                             </Link>
                           ))}
+                          <Link href={`/castings`}>
+                            <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                              <div className="ml-4">
+                                <p className="text-base font-medium text-brown">
+                                  Castings
+                                </p>
+                              </div>
+                            </a>
+                          </Link>
                           <Link href={`/tools`}>
                             <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
                               <div className="ml-4">
@@ -171,7 +165,7 @@ export default function Navbar({ categories }) {
       >
         <Popover.Panel
           focus
-          className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-black divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
@@ -193,41 +187,79 @@ export default function Navbar({ categories }) {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {solutions.map((item) => (
-                    <Link key={item.name} href={`/category/${item.href}`}>
-                      <a className="-m-3 p-3 flex items-center rounded-md">
+                    <Link
+                      key={item.name}
+                      href={`/category/${item.href}`}
+                      passHref
+                    >
+                      <Popover.Button
+                        as="a"
+                        className="-m-3 p-3 flex items-center rounded-md"
+                      >
                         <span className="ml-3 text-base font-medium text-brown">
                           {item.name}
                         </span>
-                      </a>
+                      </Popover.Button>
                     </Link>
                   ))}
-                  <Link href={`/tools`}>
-                    <a className="-m-3 p-3 flex items-center rounded-md">
+                  <Link href={`/castings`} passHref>
+                    <Popover.Button
+                      as="a"
+                      className="-m-3 p-3 flex items-center rounded-md"
+                    >
+                      <span className="ml-3 text-base font-medium text-brown">
+                        Castings
+                      </span>
+                    </Popover.Button>
+                  </Link>
+                  <Link href={`/tools`} passHref>
+                    <Popover.Button
+                      as="a"
+                      className="-m-3 p-3 flex items-center rounded-md"
+                    >
                       <span className="ml-3 text-base font-medium text-brown">
                         Tools & Hardware
                       </span>
-                    </a>
+                    </Popover.Button>
                   </Link>
-                  <Link href={`/3d-printing`}>
-                    <a className="-m-3 p-3 flex items-center rounded-md">
+                  <Link href={`/3d-printing`} passHref>
+                    <Popover.Button
+                      as="a"
+                      className="-m-3 p-3 flex items-center rounded-md"
+                    >
                       <span className="ml-3 text-base font-medium text-brown">
                         3D Printing
                       </span>
-                    </a>
+                    </Popover.Button>
                   </Link>
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <Link href="/">
-                  <a className="text-base font-medium text-brown">Home</a>
+                <Link href="/" passHref>
+                  <Popover.Button
+                    as="a"
+                    className="text-base font-medium text-brown"
+                  >
+                    Home
+                  </Popover.Button>
                 </Link>
-                <Link href="/about">
-                  <a className="text-base font-medium text-brown">About Us</a>
+                <Link href="/about" passHref>
+                  <Popover.Button
+                    as="a"
+                    className="text-base font-medium text-brown"
+                  >
+                    About Us
+                  </Popover.Button>
                 </Link>
-                <Link href="/contact">
-                  <a className="text-base font-medium text-brown">Contact Us</a>
+                <Link href="/contact" passHref>
+                  <Popover.Button
+                    as="a"
+                    className="text-base font-medium text-brown"
+                  >
+                    Contact Us
+                  </Popover.Button>
                 </Link>
               </div>
             </div>

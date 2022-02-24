@@ -9,10 +9,9 @@ const Hero = () => {
         className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center"
         style={{ backgroundImage: 'url(/images/banner.jpg)' }}
       >
-        <div className="bg-brown bg-opacity-70 lg:h-[40%] lg:w-2/5 py-4 xl:px-8 mb-6 flex flex-col justify-center text-left">
-          <h1 className="text-3xl xl:text-5xl uppercase px-6 lg:px-0">
-            Your <br /> All In One
-            <br /> Solution
+        <div className="bg-brown bg-opacity-70 lg:h-[40%] lg:w-2/5 py-4 xl:px-8 mb-6 flex flex-col justify-center items-center text-left">
+          <h1 className="text-3xl xl:text-5xl text-center uppercase px-6 lg:px-0">
+            Your All In One Solution
           </h1>
           <ul className="hidden lg:flex flex-wrap space-x-2 text-xs xl:text-md uppercase mt-2">
             <li>Special Steels</li>
@@ -88,7 +87,7 @@ const Hero = () => {
               We specialise in Crane Wheel Customisation as well as Brake Wheels
               And Sheaves.
             </p>
-            <Link href="/category/castings" passHref>
+            <Link href="/castings" passHref>
               <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
                 VIEW
               </button>
