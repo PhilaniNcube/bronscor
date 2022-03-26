@@ -42,7 +42,7 @@ export default function Services() {
             <div className="cursor-pointer hover:shadow py-6 xl:px-4 rounded xl:w-96 w-60 flex justify-center items-center flex-col">
               <div className="mb-6"></div>
               <div className="text-gray-800 dark:text-white text-2xl font-semibold text-center">
-                <h2>Mining and many others</h2>
+                <h2>Mining and many more</h2>
               </div>
             </div>
           </div>
