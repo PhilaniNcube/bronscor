@@ -7,7 +7,7 @@ const Hero = () => {
     <Fragment>
       <div
         className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover flex justify-center items-center"
-        style={{ backgroundImage: 'url(/images/geometric.jpg)' }}
+        style={{ backgroundImage: 'url(/images/geometric-small.jpg)' }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
           <div className="bg-brown bg-opacity-70 px-6 py-4">
