@@ -72,7 +72,7 @@ const Hero = () => {
               Our steels include: Bronze, Brass, Copper, Cast Iron, Stainless
               Steel, Aluminium & more
             </p>
-            <Link href="/category/steel" passHref>
+            <Link href="/products" passHref>
               <button className="border-2 text-black py-1 px-6 border-black hover:bg-brown">
                 VIEW
               </button>
