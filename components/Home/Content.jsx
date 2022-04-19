@@ -83,13 +83,13 @@ export default function Content() {
           <p className="text-sm">Newton Park</p>
           <p className="text-sm">Port Elizabeth</p>
           <h4 className="text-xl mt-2">Quick Contact</h4>
-          <p className="text-sm pt-1">041 543 1530</p>
+          <p className="text-sm pt-1">(041) 453 1530</p>
           <p className="text-sm">info@bronscorcc.co.za</p>
           <h4 className="text-xl mt-2">Operating Hours</h4>
           <p className="text-sm pt-1">Monday - Thursday</p>
-          <p className="text-sm">08:00  - 16:45 </p>
+          <p className="text-sm">08:00 - 16:45 </p>
           <p className="text-sm pt-1">Friday</p>
-          <p className="text-sm">08:00  - 15:00 </p>
+          <p className="text-sm">08:00 - 15:00 </p>
           <button className="flex space-x-3 w-[250px] md:w-fit bg-black mt-4 px-8 py-2 hover:shadow-md transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -6,59 +6,65 @@ const Hero = () => {
   return (
     <Fragment>
       <div
-        className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center"
-        style={{ backgroundImage: 'url(/images/banner.jpg)' }}
+        className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover flex justify-center items-center"
+        style={{ backgroundImage: 'url(/images/geometric.jpg)' }}
       >
-        <div className="bg-brown bg-opacity-70 lg:h-[40%] lg:w-2/5 py-4 xl:px-8 mb-6 flex flex-col justify-center items-center text-left">
-          <h1 className="text-3xl xl:text-5xl text-center uppercase px-6 lg:px-0">
-            Your All In One Solution
-          </h1>
-          <ul className="hidden lg:flex flex-wrap space-x-2 text-xs xl:text-md uppercase mt-2">
-            <li>Special Steels</li>
-            <li>Castings</li>
-            <li>Tools & Hardware</li>
-            <li>3D Print</li>
-          </ul>
-        </div>
-        <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6  text-white">
-          <Link href="/about" passHref>
-            <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 rounded-full bg-white text-brown"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <p className="uppercase">More About Us</p>
-            </button>
-          </Link>
-          <Link href="/products" passHref>
-            <button className="flex space-x-3 w-[250px] md:w-fit bg-black px-8 py-4 hover:shadow-md transition">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 rounded-full bg-white text-black"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <p className="uppercase">Our Products</p>
-            </button>
-          </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
+          <div className="bg-brown bg-opacity-70 px-6 py-4">
+            <h1 className="text-3xl xl:text-5xl uppercase font-bold px-6 lg:px-0">
+              Your All In One <br />
+              Solution
+            </h1>
+            <ul className="hidden lg:flex flex-wrap space-x-2 my-6 text-xs xl:text-md uppercase mt-2">
+              <li>Special Steels |</li>
+              <li>Castings |</li>
+              <li>Tools & Hardware |</li>
+              <li>3D Print </li>
+            </ul>
+            <div className="max-w-6xl mx-auto flex flex-col space-y-2 md:space-y-0 md:flex-row  text-white">
+              <Link href="/about" passHref>
+                <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 rounded-full bg-white text-brown"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <p className="uppercase">More About Us</p>
+                </button>
+              </Link>
+              <Link href="/products" passHref>
+                <button className="flex space-x-3 w-[250px] md:w-fit bg-gray-300 px-8 py-4 hover:shadow-md transition">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 rounded-full text-black"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <p className="uppercase text-black">Our Products</p>
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="bg-black bg-opacity-70 p-6">
+            <img src="/images/logo.png" alt="" />
+          </div>
         </div>
       </div>
       <div className="bg-brown min-h-[230px] z-10">

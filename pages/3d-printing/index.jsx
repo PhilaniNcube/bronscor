@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
+import Image from 'next/image';
+import { get3dPrinted } from '../../lib';
 
-const index = () => {
+const index = ({ products }) => {
+  console.log(products);
   return (
     <Fragment>
       <div
@@ -13,7 +16,7 @@ const index = () => {
           </h1>
         </div>
       </div>
-      <main className="max-w-6xl mx-auto py-16">
+      <main className="max-w-6xl mx-auto py-16 px-6 lg:px-0">
         <h1 className="text-3xl font-bold">Our 3D Printing Services</h1>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="">
@@ -59,9 +62,36 @@ const index = () => {
             </ul>
           </div>
         </div>
+        <div className="grid -grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-6 py-6">
+          {products.map((product) => (
+            <div key={product.node.id} className="rounded-md shadow-2xl ">
+              <div className="aspect-square rounded">
+                <Image
+                  src={product.node.image.url}
+                  alt={product.node.name}
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="bg-brown px-3 py-2 text-black rounded-b-md">
+                <h3 className="text-sm font-medium">{product.node.name}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
     </Fragment>
   );
 };
 
 export default index;
+
+export async function getServerSideProps() {
+  const products = await get3dPrinted();
+
+  return {
+    props: {
+      products,
+    },
+  };
+}
