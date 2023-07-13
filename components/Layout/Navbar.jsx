@@ -30,27 +30,27 @@ function classNames(...classes) {
 export default function Navbar({ categories }) {
   return (
     <Popover className="relative bg-black text-brown">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex">
-        <div className="flex-1 max-w-7xl flex justify-between items-center py-2 md:justify-start md:space-x-10">
+      <div className="flex px-4 mx-auto max-w-7xl sm:px-6">
+        <div className="flex items-center justify-between flex-1 max-w-7xl md:justify-start md:space-x-10">
           <div className="flex justify-start lg:flex-1">
             <Link href="/">
               <a>
                 <span className="sr-only">Bronscor</span>
                 <img
                   className="object-cover w-52"
-                  src="/images/logo.png"
+                  src="/images/bronscor_logo.png"
                   alt=""
                 />
               </a>
             </Link>
           </div>
-          <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-black rounded-md p-2 inline-flex items-center justify-center text-brown focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brown">
+          <div className="-my-2 -mr-2 md:hidden">
+            <Popover.Button className="inline-flex items-center justify-center p-2 bg-black rounded-md text-brown focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brown">
               <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <MenuIcon className="w-6 h-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <Link href="/">
               <a className="text-base font-medium text-brown">Home</a>
             </Link>
@@ -63,15 +63,15 @@ export default function Navbar({ categories }) {
                 <Fragment>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-brown' : 'text-brown',
-                      'group  inline-flex items-center text-base font-medium  ',
+                      open ? "text-brown" : "text-brown",
+                      "group  inline-flex items-center text-base font-medium  "
                     )}
                   >
                     <span>Products</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-brown' : 'text-brown',
-                        'ml-2 h-5 w-5 group-hover:text-brown',
+                        open ? "text-brown" : "text-brown",
+                        "ml-2 h-5 w-5 group-hover:text-brown"
                       )}
                       aria-hidden="true"
                     />
@@ -86,9 +86,9 @@ export default function Navbar({ categories }) {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                      <div className="rounded-lg shadow-lg  overflow-hidden">
-                        <div className="relative grid gap-6 bg-black px-5 py-6 sm:gap-8 sm:p-8">
+                    <Popover.Panel className="absolute z-10 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                      <div className="overflow-hidden rounded-lg shadow-lg">
+                        <div className="relative grid gap-6 px-5 py-6 bg-black sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
                             <Link
                               key={item.name}
@@ -97,7 +97,7 @@ export default function Navbar({ categories }) {
                             >
                               <Popover.Button
                                 as="a"
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                                className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800"
                               >
                                 <div className="ml-4">
                                   <p className="text-base font-medium text-brown">
@@ -108,7 +108,7 @@ export default function Navbar({ categories }) {
                             </Link>
                           ))}
                           <Link href={`/castings`}>
-                            <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                            <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800">
                               <div className="ml-4">
                                 <p className="text-base font-medium text-brown">
                                   Castings
@@ -117,7 +117,7 @@ export default function Navbar({ categories }) {
                             </a>
                           </Link>
                           <Link href={`/tools`}>
-                            <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                            <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800">
                               <div className="ml-4">
                                 <p className="text-base font-medium text-brown">
                                   Tools & Hardware
@@ -126,7 +126,7 @@ export default function Navbar({ categories }) {
                             </a>
                           </Link>
                           <Link href={`/3d-printing`}>
-                            <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800">
+                            <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800">
                               <div className="ml-4">
                                 <p className="text-base font-medium text-brown">
                                   3D Printing
@@ -141,17 +141,17 @@ export default function Navbar({ categories }) {
                 </Fragment>
               )}
             </Popover>
-            <Link href="/contact">
-              <a className="text-base font-medium text-brown">Contact Us</a>
-            </Link>
           </Popover.Group>
+          <Link href="/contact">
+            <a className="text-base font-medium text-brown">Contact Us</a>
+          </Link>
+          <Link href="/contact" passHref>
+            <button className="items-center justify-center hidden h-full px-6 ml-8 transition duration-150 cursor-pointer bg-brown hover:bg-opacity-80 md:flex">
+              <p className="text-black ">Get A Quote</p>
+              <ArrowSmRightIcon className="w-6 text-black" />
+            </button>
+          </Link>
         </div>
-        <Link href="/contact" passHref>
-          <button className="hidden bg-brown hover:bg-opacity-80 cursor-pointer  transition duration-150 h-[88px] md:flex ml-8 px-6 items-center justify-center">
-            <p className=" text-black">Get A Quote</p>
-            <ArrowSmRightIcon className="text-black w-6" />
-          </button>
-        </Link>
       </div>
 
       <Transition
@@ -165,22 +165,22 @@ export default function Navbar({ categories }) {
       >
         <Popover.Panel
           focus
-          className="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform md:hidden"
         >
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-black divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-6 px-5">
+          <div className="bg-black divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
+            <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    className="h-8 w-auto"
+                    className="w-auto h-8"
                     src="/images/logo.png"
                     alt="Bronscor"
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-black rounded-md p-2 inline-flex items-center justify-center text-brown  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brown">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 bg-black rounded-md text-brown focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brown">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function Navbar({ categories }) {
                     >
                       <Popover.Button
                         as="a"
-                        className="-m-3 p-3 flex items-center rounded-md"
+                        className="flex items-center p-3 -m-3 rounded-md"
                       >
                         <span className="ml-3 text-base font-medium text-brown">
                           {item.name}
@@ -205,7 +205,7 @@ export default function Navbar({ categories }) {
                   <Link href={`/castings`} passHref>
                     <Popover.Button
                       as="a"
-                      className="-m-3 p-3 flex items-center rounded-md"
+                      className="flex items-center p-3 -m-3 rounded-md"
                     >
                       <span className="ml-3 text-base font-medium text-brown">
                         Castings
@@ -215,7 +215,7 @@ export default function Navbar({ categories }) {
                   <Link href={`/tools`} passHref>
                     <Popover.Button
                       as="a"
-                      className="-m-3 p-3 flex items-center rounded-md"
+                      className="flex items-center p-3 -m-3 rounded-md"
                     >
                       <span className="ml-3 text-base font-medium text-brown">
                         Tools & Hardware
@@ -225,7 +225,7 @@ export default function Navbar({ categories }) {
                   <Link href={`/3d-printing`} passHref>
                     <Popover.Button
                       as="a"
-                      className="-m-3 p-3 flex items-center rounded-md"
+                      className="flex items-center p-3 -m-3 rounded-md"
                     >
                       <span className="ml-3 text-base font-medium text-brown">
                         3D Printing
@@ -235,7 +235,7 @@ export default function Navbar({ categories }) {
                 </nav>
               </div>
             </div>
-            <div className="py-6 px-5 space-y-6">
+            <div className="px-5 py-6 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <Link href="/" passHref>
                   <Popover.Button
