@@ -7,7 +7,7 @@ const Hero = () => {
     <Fragment>
       <div
         className="h-[60vh] md:h-[80vh] bg-center bg-no-repeat bg-cover flex justify-center items-center"
-        style={{ backgroundImage: 'url(/images/geometric-small.jpg)' }}
+        style={{ backgroundImage: "url(/images/geometric-small.jpg)" }}
       >
         <div className="grid max-w-6xl grid-cols-1 mx-auto lg:grid-cols-2">
           <div className="px-6 py-4 bg-brown bg-opacity-70">
@@ -23,14 +23,19 @@ const Hero = () => {
             </ul>
             <div className="flex flex-col max-w-6xl mx-auto space-y-2 text-white md:space-y-0 md:flex-row">
               <Link href="/about" passHref>
-                <button className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition">
+                <button
+                  type="button"
+                  className="flex space-x-3 w-[250px] md:w-fit bg-brown px-8 py-4 hover:shadow-md transition"
+                >
                   <svg
+                    xlinkTitle="More About Us"
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-6 h-6 bg-white rounded-full text-brown"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
+                    <title>More About Us</title>
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -42,7 +47,10 @@ const Hero = () => {
                 </button>
               </Link>
               <Link href="/products" passHref>
-                <button className="flex space-x-3 w-[250px] md:w-fit bg-gray-300 px-8 py-4 hover:shadow-md transition">
+                <button
+                  type="button"
+                  className="flex space-x-3 w-[250px] md:w-fit bg-gray-300 px-8 py-4 hover:shadow-md transition"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-6 h-6 text-black rounded-full"
@@ -50,6 +58,7 @@ const Hero = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
+                    <title>Our Products</title>
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -62,8 +71,18 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="bg-black bg-opacity-70">
-            <img src="/images/bronscor_logo.png" alt="Logo" className="w-full opacity-80" />
+          <div className="relative flex flex-col items-center justify-center pt-4 pb-12 bg-black bg-opacity-70">
+            <img
+              src="/images/express-transparent.webp"
+              alt="Logo"
+              className="object-cover w-1/2"
+            />
+            <button type="button" className="p-4 text-black bg-brown">
+              <Link href="https://store.bronscorcc.co.za">
+                Visit Our Online Store
+              </Link>
+            </button>
+
           </div>
         </div>
       </div>
@@ -79,7 +98,10 @@ const Hero = () => {
               Steel, Aluminium & more
             </p>
             <Link href="/products" passHref>
-              <button className="px-6 py-1 text-black border-2 border-black hover:bg-brown">
+              <button
+                type="button"
+                className="px-6 py-1 text-black border-2 border-black hover:bg-brown"
+              >
                 VIEW
               </button>
             </Link>
@@ -94,7 +116,10 @@ const Hero = () => {
               And Sheaves.
             </p>
             <Link href="/castings" passHref>
-              <button className="px-6 py-1 text-black border-2 border-black hover:bg-brown">
+              <button
+                type="button"
+                className="px-6 py-1 text-black border-2 border-black hover:bg-brown"
+              >
                 VIEW
               </button>
             </Link>
@@ -109,7 +134,10 @@ const Hero = () => {
               assist.
             </p>
             <Link href="/tools" passHref>
-              <button className="px-6 py-1 text-black border-2 border-black hover:bg-brown">
+              <button
+                type="button"
+                className="px-6 py-1 text-black border-2 border-black hover:bg-brown"
+              >
                 VIEW
               </button>
             </Link>
@@ -124,7 +152,10 @@ const Hero = () => {
               complex geometries.
             </p>
             <Link href="/3d-printing" passHref>
-              <button className="px-6 py-1 text-black border-2 border-black hover:bg-brown">
+              <button
+                type="button"
+                className="px-6 py-1 text-black border-2 border-black hover:bg-brown"
+              >
                 VIEW
               </button>
             </Link>
